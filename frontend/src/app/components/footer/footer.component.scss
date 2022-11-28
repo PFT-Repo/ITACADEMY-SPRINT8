@@ -1,0 +1,57 @@
+.bg-dark {
+    height: 100%;
+    width: auto;
+    background-image: url(https://static-mh.content.disney.io/starwars/assets/footer/vader_2-86e8fdb4e26d.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: black;
+    bottom: 0;
+}
+.foto{
+    height: 100%;
+    width: auto;
+    background-image: url(https://static-mh.content.disney.io/starwars/assets/footer/vader_2-86e8fdb4e26d.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+z-index: -1;
+}
+
+.negro {
+    height: auto;
+    width: auto;
+    background-image: url(https://static-mh.content.disney.io/starwars/assets/footer/vader_2-86e8fdb4e26d.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: black;
+}
+
+#legal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: medium;
+ a{
+    list-style: none;
+    text-decoration: none;
+    font-style: normal;
+ }
+    
+}
+
+li{
+     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: medium;
+ a{
+    list-style: none;
+    text-decoration: none;
+    font-style: normal;
+    font-size: x-small;
+    color: white;
+ }
+
+}

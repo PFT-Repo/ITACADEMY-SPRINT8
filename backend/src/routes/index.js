@@ -6,113 +6,113 @@ const jwt = require('jsonwebtoken');
 
 router.get('/starpi',(req,res)=>{
     res.send({naves:{nave:[{
-        name: 'Corvette CR90',
-        img:'https://static.wikia.nocookie.net/esstarwars/images/0/0a/Corvette_negvv.jpg/revision/latest/scale-to-width-down/350?cb=20081218232212'
+        name: 'CR90 corvette',
+        img:'./assets/img/Corvette_negvv.webp'
     },{
         name: 'Star Destroyer',
-        img:'https://static.wikia.nocookie.net/esstarwars/images/6/67/StarDestroyer_negvv.jpg/revision/latest/scale-to-width-down/350?cb=20090317224209'
+        img:'./assets/img/StarDestroyer_negvv.webp'
     },{
         name: 'Sentinel-class landing craft',
-        img:'https://static.wikia.nocookie.net/esstarwars/images/5/5b/Imperial_Sentinel-class_shuttle.png/revision/latest/thumbnail-down/width/200/height/200?cb=20180108035125'
+        img:'./assets/img/Imperial_Sentinel-class_shuttle.webp'
     },{
         name: 'Death Star',
-        img:'https://static.wikia.nocookie.net/esstarwars/images/7/72/DeathStar1-SWE.png/revision/latest/thumbnail-down/width/200/height/200?cb=20111007065157'
+        img:'./assets/img/DeathStar-SWE.webp'
     },{
-        name: 'Millenium Falcon',
-        img:'https://static.wikia.nocookie.net/esstarwars/images/5/52/Millennium_Falcon_Fathead_TROS.png/revision/latest/thumbnail-down/width/200/height/200?cb=20191220220841'
+        name: 'Millennium Falcon',
+        img:'./assets/img/Millennium_Falcon_Fathead_TROS.webp'
     },{
         name: 'Y-wing',
-        img:'https://static.wikia.nocookie.net/esstarwars/images/8/81/Y-wing.png/revision/latest/thumbnail-down/width/200/height/200?cb=20170724190438'
+        img:'./assets/img/Y-wing.webp'
     },{
         name: 'X-wing',
-        img:'https://static.wikia.nocookie.net/esstarwars/images/8/80/X-wing_Fathead.png/revision/latest/scale-to-width-down/350?cb=20190624005938'
+        img:'./assets/img/X-wing_Fathead.webp'
     },{
         name: 'TIE Advanced x1',
-        img:'https://static.wikia.nocookie.net/esstarwars/images/0/06/TIE_Avanzado_X1.png/revision/latest/scale-to-width-down/350?cb=20171212224013'
+        img:'./assets/img/TIE_Avanzado_X1.webp'
     },{
         name: 'Executor',
-        img:'https://static.wikia.nocookie.net/esstarwars/images/3/30/Executor_BF2.png/revision/latest/scale-to-width-down/350?cb=20190810045012'
+        img:'./assets/img/Executor_BF2.webp'
     },{
         name: 'Rebel transport',
-        img:'https://static.wikia.nocookie.net/esstarwars/images/6/67/GR-75_Medium_Transport_TAEtrivia.png/revision/latest/scale-to-width-down/350?cb=20190128000951'
+        img:'./assets/img/GR-75_Medium_Transport_TAEtrivia.webp'
     },{
         name: 'Slave 1',
-        img:'https://static.wikia.nocookie.net/esstarwars/images/b/ba/Slave_I_DICE.png/revision/latest/scale-to-width-down/350?cb=20171112170357'
+        img:'./assets/img/Slave_I_DICE.webp'
     },{
         name: 'Imperial shuttle',
-        img:'https://static.wikia.nocookie.net/starwars/images/d/d3/ImperialShuttle-DB.png/revision/latest/scale-to-width-down/500?cb=20150920051331'
+        img:'./assets/img/ImperialShuttle-DB.webp'
     },{
         name: 'EF76 Nebulon-B escort frigate',
-        img:'https://static.wikia.nocookie.net/starwars/images/7/71/NebulonB-SWS.png/revision/latest/scale-to-width-down/500?cb=20210303023412'
+        img:'./assets/img/NebulonB-SWS.webp'
     },{
         name: 'Calamari Cruiser',
-        img:'https://static.wikia.nocookie.net/starwars/images/9/94/MCLiberty.jpg/revision/latest/scale-to-width-down/500?cb=20070104001953'
+        img:'./assets/img/MCLiberty.webp'
     },{
         name: 'A-wing',
-        img:'https://static.wikia.nocookie.net/starwars/images/8/8d/A-wing_DICE.png/revision/latest/scale-to-width-down/500?cb=20161021230115'
+        img:'./assets/img/A-wing_DICE.webp'
     },{
         name: 'B-wing',
-        img:'https://static.wikia.nocookie.net/esstarwars/images/e/e2/Ala-_B.jpg/revision/latest/scale-to-width-down/350?cb=20090219014659'
+        img:'./assets/img/Ala-_B.webp'
     },{
         name: 'Republic Cruiser',
-        img:'https://static.wikia.nocookie.net/starwars/images/5/5f/Republic_Cruiser.png/revision/latest/scale-to-width-down/500?cb=20161015074831'
+        img:'./assets/img/Republic_Cruiser.webp'
     },{
         name: 'Droid control ship',
-        img:'https://static.wikia.nocookie.net/starwars/images/9/95/Lucrehulk_battleship_TCW.jpg/revision/latest/scale-to-width-down/500?cb=20090311015214'
+        img:'./assets/img/Lucrehulk_battleship_TCW.webp'
     },{
         name: 'Naboo fighter',
-        img:'https://static.wikia.nocookie.net/esstarwars/images/d/d3/N-1_BF2.png/revision/latest/scale-to-width-down/350?cb=20180605055443'
+        img:'./assets/img/N-1_BF2.webp'
     },{
         name: 'Naboo Royal Starship',
-        img:'https://static.wikia.nocookie.net/starwars/images/9/9e/Naboo_Royal_Starship.png/revision/latest/scale-to-width-down/500?cb=20161019065403'
+        img:'./assets/img/Naboo_Royal_Starship.webp'
     },{
         name: 'Scimitar',
-        img:'https://static.wikia.nocookie.net/starwars/images/1/1c/Scimitar-USC.png/revision/latest/scale-to-width-down/500?cb=20190604143506'
+        img:'./assets/img/Scimitar-USC.webp'
     },{
         name: 'J-type diplomatic barge',
-        img:'https://static.wikia.nocookie.net/starwars/images/1/1c/J-type_Diplomatic_Barge_TCW.png/revision/latest/scale-to-width-down/500?cb=20160903222638'
+        img:'./assets/img/J-type_Diplomatic_Barge_TCW.webp'
     },{
         name: 'AA-9 Coruscant freighter',
-        img:'https://static.wikia.nocookie.net/starwars/images/c/c7/Aa9coruscantfreighter.jpg/revision/latest/scale-to-width-down/500?cb=20091201131352'
+        img:'./assets/img/Aa9coruscantfreighter.webp'
     },{
         name: 'Jedi starfighter',
-        img:'https://static.wikia.nocookie.net/starwars/images/7/79/Jedi_Starfighter_EpII.png/revision/latest/scale-to-width-down/500?cb=20150722030412'
+        img:'./assets/img/Jedi_Starfighter_EpII.webp'
     },{
         name: 'H-type Nubian yacht',
-        img:'https://static.wikia.nocookie.net/starwars/images/f/fb/Nabooyacht.jpg/revision/latest?cb=20071216070919'
+        img:'./assets/img/Nabooyacht.webp'
     },{
         name: 'Republic Assault ship',
-        img:'https://static.wikia.nocookie.net/starwars/images/7/70/Acclamator-TCWIV.png/revision/latest/scale-to-width-down/500?cb=20221105061503'
+        img:'./assets/img/Acclamator-TCWIV.webp'
     },{
         name: 'Solar Sailer',
-        img:'https://static.wikia.nocookie.net/starwars/images/1/10/CountDookusSolarSailer-WotF.png/revision/latest/scale-to-width-down/500?cb=20200518063614'
+        img:'./assets/img/CountDookusSolarSailer-WotF.webp'
     },{
         name: 'Trade Federation cruiser',
-        img:'https://static.wikia.nocookie.net/starwars/images/4/47/InvisibleHandStarboard-FF.png/revision/latest/scale-to-width-down/500?cb=20221119215500'
+        img:'./assets/img/InvisibleHandStarboard-FF.webp'
     },{
         name: 'Theta-class T-2c shuttle',
-        img:'https://static.wikia.nocookie.net/starwars/images/8/8e/Theta-class_shuttle.png/revision/latest/scale-to-width-down/500?cb=20220304110027'
+        img:'./assets/img/Theta-class_shuttle.webp'
     },{
         name: 'Republic attack cruiser',
-        img:'https://static.wikia.nocookie.net/starwars/images/c/c8/Imperialattackcruisers.png/revision/latest/scale-to-width-down/500?cb=20140317112248'
+        img:'./assets/img/Imperialattackcruisers.webp'
     },{
         name: 'Naboo star skiff',
-        img:'https://static.wikia.nocookie.net/starwars/images/1/1f/Nabooskiff-SWCTP.png/revision/latest/scale-to-width-down/350?cb=20221031044447'
+        img:'./assets/img/Nabooskiff-SWCTP.webp'
     },{
         name: 'Jedi Interceptor',
-        img:'https://static.wikia.nocookie.net/esstarwars/images/a/a6/Eta-2_Interceptor.png/revision/latest/scale-to-width-down/350?cb=20171207152401'
+        img:'./assets/img/Eta-2_Interceptor.webp'
     },{
         name: 'arc-170',
-        img:'https://static.wikia.nocookie.net/esstarwars/images/3/32/Starfigher.jpg/revision/latest/scale-to-width-down/350?cb=20120429113036'
+        img:'./assets/img/Starfigher.webp'
     },{
         name: 'Banking clan frigte',
-        img:'https://static.wikia.nocookie.net/starwars/images/0/07/Munificent_TCW.jpg/revision/latest/scale-to-width-down/500?cb=20090311013715'
+        img:'./assets/img/Munificent_TCW.webp'
     },{
         name: 'Belbullab-22 starfighter',
-        img:'https://static.wikia.nocookie.net/esstarwars/images/3/3e/Soulless_One2_TCW.jpg/revision/latest/scale-to-width-down/350?cb=20190806235308'
+        img:'./assets/img/Soulless_One2_TCW.webp'
     },{
         name: 'V-wing',
-        img:'https://static.wikia.nocookie.net/starwars/images/a/a9/V-wing_BF2.png/revision/latest/scale-to-width-down/500?cb=20170825000555'
+        img:'./assets/img/V-wing_BF2.webp'
     }]},
     peliculas:{peli:[{
         number: 1,

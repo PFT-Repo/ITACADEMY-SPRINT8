@@ -9,22 +9,50 @@ import { ApistarsService } from 'src/app/services/apistars.service';
 })
 export class StarshipsListComponent implements OnInit {
   inGen = 0
-  constructor(private rou: Router,private ser:ApistarsService) { this.ser.getships();}
-  
+  private actualPage = 1;
+  private lastPage = 4;
+  constructor(private rou: Router,private ser:ApistarsService) { 
+  this.ser.getships(this.actualPage);}
   items: any[] = [] 
  
   ngOnInit(): void { 
     console.log(this.ser.list);
-    setTimeout(() => {this.items=this.ser.list}, 20);
+    setTimeout(()=>{this.updateList()},1);
+    
   }
-
+updateList(){ 
+  this.items=this.ser.list;
+  console.log(this.items);
+}
   insertInArray(data: any) {
 
     for (let index = 0; index < data.length; index++) {
       this.items[this.inGen] = data[index];
       this.inGen++;
+    }
+    console.log('after insert ' +this.items);
+    
+  }
+  onScroll(){
+    if(this.actualPage<=this.lastPage){ 
+      console.log('Scrolled');
+      if(this.actualPage == 1){
+        this.actualPage=2;
+      }
+      this.ser.getships(this.actualPage);
+      this.actualPage++;
+      this.scrollTop();
 
     }
+    else{
+      console.log('Scroll finalizado');
+      
+    }
+  }
+
+scrollTop() {
+    document.body.scrollTop = 0; // Safari
+    document.documentElement.scrollTop = 0; // Other
   }
 
   openDetails(id: any) {

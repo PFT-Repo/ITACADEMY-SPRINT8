@@ -17,6 +17,7 @@ import { ApistarsService } from './services/apistars.service';
 import { SignupComponent } from './components/signup/signup.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { AuthGuard } from './auth.guard';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { AuthGuard } from './auth.guard';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule,HttpClientModule
+    AppRoutingModule,FormsModule,HttpClientModule,InfiniteScrollModule
   ],
   providers: [ApistarsService,AuthGuard],
   bootstrap: [AppComponent]

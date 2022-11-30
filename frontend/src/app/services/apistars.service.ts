@@ -9,12 +9,14 @@ export class ApistarsService {
   imgList: any[]=[];
 
   constructor() { 
-    this.getships();
+   //this.getships(1);
     this.getImageships()
   }
   
-  getships() {
-    fetch('https://swapi.py4e.com/api/starships/').then(response => response.json()).then(data => this.getList(data.results)
+  getships(n:number) {
+    console.log(n);
+    let url = new URL('http://localhost:3000/starpi/starships/'+n);
+    fetch(url).then(response => response.json()).then(data => this.getList(data.results)
     );
  
   }
@@ -23,11 +25,10 @@ export class ApistarsService {
       this.list[index] = any[index];
     }   
     return this.list;
-  }
+  } 
 
   getImageships() {
-    fetch('https://starwars-visualguide.com/#/starships?page=1').then(response => response.json()).then(data => console.log( JSON.parse(data))
-    //this.getImageList(data)
+    fetch('http://localhost:3000/starpi').then(response => response.json()).then(data => this.getImageList(data)
     );
  
   }

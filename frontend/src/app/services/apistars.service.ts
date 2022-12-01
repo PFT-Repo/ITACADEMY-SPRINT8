@@ -28,16 +28,15 @@ export class ApistarsService {
   } 
 
   getImageships() {
-    fetch('http://localhost:3000/starpi').then(response => response.json()).then(data => this.getImageList(data)
+    fetch('http://localhost:3000/starpi').then(response => response.json()).then(data => this.getImageList(data.naves)
     );
  
   }
   getImageList(any:any){
-    console.log(any);
-    
-    for (let index = 0; index < any.length; index++) {
+    this.imgList = any;
+    /*for (let index = 0; index < any.length; index++) {
       this.imgList[index] = any[index];
-    }   
+    }   */
      console.log(this.imgList);
     return this.imgList;
   }

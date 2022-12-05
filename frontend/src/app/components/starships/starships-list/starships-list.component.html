@@ -1,8 +1,8 @@
-<div class="bg d-flex justify-content-center px-0" infiniteScroll [infiniteScrollDistance]="0" [infiniteScrollThrottle]="1000" [alwaysCallback]="true" (scrolled)="onScroll()">
-    <div class="container bg-stars m-0 p-0">
+<div class="bg w-100 d-flex px-0" infiniteScroll [infiniteScrollDistance]="0" [infiniteScrollThrottle]="1000" [alwaysCallback]="true" (scrolled)="onScroll()">
+    <div class="container-fluid bg-stars m-0 p-0">
         <div>
             <ul class="row-cols-1 w-100 text-center">
-                <div *ngFor="let item of items;let indexOfelement=index;" (click)="openDetails(item.name)" class='cols-auto mb-3'>
+                <div *ngFor="let item of items;let indexOfelement=index;" (click)="openDetails(item.name)" class='cols-6 mb-3'>
                     <div class="card-body bg-card">
                         <p></p>
                         <h5 class="card-title">{{item.name}}</h5>

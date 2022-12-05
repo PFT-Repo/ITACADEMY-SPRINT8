@@ -22,3 +22,11 @@
 .bg-card{
     background-color: #151515;
 }
+
+@media screen and (max-width: 268px)
+{
+   .card-body{
+    flex: 1 1 100px;
+    min-width: 100px;
+   }
+}

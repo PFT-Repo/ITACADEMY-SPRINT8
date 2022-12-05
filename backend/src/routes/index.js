@@ -1948,8 +1948,6 @@ router.post('/signin', async(req, res) => {
             }
     });
 });
-module.exports = router;
-
 function verifyToken(req, res, next) {
     if (!req.headers.authorization) {
         return res.status(401).send("No Autorizado");
@@ -1962,3 +1960,4 @@ function verifyToken(req, res, next) {
     req.userId = payload._id;
     next();
 }
+module.exports = router;

@@ -1,16 +1,21 @@
-<div class="row align-content-center " style="height: 500px;">
-    <div class="col-md-4 mx-auto">
-        <div class="card">
-            <div class="card-header">Crear cuenta</div>
+<div class="row align-content-center py-5" style="width: 100%;">
+    <div class="col-4 mx-auto">
+        <div class="card h-100">
+            <div class="card-header text-center">Registro</div>
             <div class="card-body">
                 <form action="signUp()" class="g-3">
-                    <div class="form-group">
-                        <input type="email" [(ngModel)]="user.email" name="email" class="form-control" required>
+                    <div class="form-group my-3">
+                        <input type="email" [(ngModel)]="user.email" name="email" class="form-control"
+                            placeholder="Email@me.com" required>
                     </div>
-                    <div class="form-group">
-                        <input type="password" [(ngModel)]="user.password" name="password" class="form-control" required>
+                    <div class="form-group my-3">
+                        <input type="password" [(ngModel)]="user.password" name="password" class="form-control"
+                            placeholder="Password" required>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block" (click)="signUp()">Enviar</button>
+                    <div class="text-center col-12">
+                         <button type="submit" class="btn btn-primary btn-block"
+                            (click)="signUp()">Enviar</button>
+                    </div>
                 </form>
             </div>
         </div>

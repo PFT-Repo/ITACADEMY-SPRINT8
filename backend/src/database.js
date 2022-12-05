@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 });
 */
-var mongoURI = "mongodb://localhost/";
+var mongoURI = "mongodb://localhost/starpi";
 var MongoDB = mongoose.connect(mongoURI,{
     useNewUrlParser:true,
     useUnifiedTopology:true

@@ -45,7 +45,7 @@ console.log(this.itemsi);
  getMoviesFromDirector(array:[]) {
   const values = Object.values(array);
 let v:any[] = values[0]
-const result = v.filter((num:{name: string}) => num.name == this.queriesGot);
+const result = v?.filter((num:{name: string}) => num.name == this.queriesGot);
 //  if (array!= null){return array.filter((array:{name:string}) => array.name == this.queriesGot);
 //}
 return result;

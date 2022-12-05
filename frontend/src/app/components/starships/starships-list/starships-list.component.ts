@@ -12,16 +12,14 @@ export class StarshipsListComponent implements OnInit {
   private actualPage = 1;
   private lastPage = 4;
   constructor(private rou: Router,private ser:ApistarsService) { 
-  this.ser.getships(this.actualPage);}
+  this.ser.getships(this.actualPage);setTimeout(()=>{this.updateList()},100);}
   items: any[] = [] 
  
   ngOnInit(): void { 
-    console.log(this.ser.list);
-    setTimeout(()=>{this.updateList()},1);
-    
+    this.ser.realList=[]
   }
 updateList(){ 
-  this.items=this.ser.list;
+  this.items=this.ser.realList;
   console.log(this.items);
 }
   insertInArray(data: any) {
@@ -41,7 +39,7 @@ updateList(){
       }
       this.ser.getships(this.actualPage);
       this.actualPage++;
-      this.scrollTop();
+      setTimeout(()=>{this.updateList()},100);
 
     }
     else{

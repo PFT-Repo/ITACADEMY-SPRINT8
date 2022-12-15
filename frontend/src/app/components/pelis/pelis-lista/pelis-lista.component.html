@@ -1,0 +1,22 @@
+<div class="bg w-100 d-flex px-0 ">
+    <div class="container-fluid bg-stars m-0 p-0">
+        <ul class="row-cols-1 w-100 text-center">
+            <div *ngFor="let item of items;let indexOfelement=index;" (click)="openDetails(item.title)" class='cols-6 mb-3'>
+                <div class="row g-0 bg-card">
+                    <div class="col-md-4">
+                        <img src="assets/img/{{item.title}}.jpg" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8 align-items-center d-flex my-auto">
+                        <div class="card-body">
+                            <div class="m-auto">
+                                <h5 class="card-title">{{item.title}}</h5>
+                                <p class="card-text">{{item.episode_id}}</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
+</div>

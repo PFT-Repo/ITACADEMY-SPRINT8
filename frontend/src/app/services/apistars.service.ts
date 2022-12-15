@@ -7,6 +7,7 @@ import { Injectable } from '@angular/core';
 export class ApistarsService {
   list: any[]=[];
   realList:any[]=[]
+  filmList:any[]=[]
   imgList: any[]=[];
   place = 0;
   constructor() { 
@@ -23,6 +24,23 @@ export class ApistarsService {
     );
  
   }
+  getFilms() {
+    let url = new URL('http://localhost:3000/starpi/films');
+    fetch(url).then(response => response.json()).then(data => this.getFilmList(data.results)
+    );
+  }
+  getFilmList(any:any){
+    console.log(any);
+   this.list = any;
+   for (let index = 0; index < any.length; index++) {
+     this.filmList.push(any[index]);
+    
+   }
+   //this.filmList.push( any);
+   console.log(this.filmList);
+   
+    return this.filmList.sort((a,b)=> a.episode_id - b.episode_id );
+  } 
   getList(any:any){
     console.log(any);
    this.list = any;

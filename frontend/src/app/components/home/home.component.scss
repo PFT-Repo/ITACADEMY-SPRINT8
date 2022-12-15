@@ -1,4 +1,4 @@
-.bg-stars{
+.bg-stars {
     background-image: url(https://static-mh.content.disney.io/starwars/assets/navigation/navigation_stars-c6452e016c73.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -6,4 +6,22 @@
     height: 100%;
     background-color: black;
     color: grey;
+}
+
+#imgbtn:hover {
+    background: rgba(0, 0, 0, .9) url("https://cdn-hdipn.nitrocdn.com/xkfywsYkexyVkVixnWvQKbjCudkmipSU/assets/static/optimized/rev-f1c46cf/wp-content/uploads/2015/12/nave-star-wars-ub-feature-1-1100x572.jpg");
+    background-position: center;
+    background-size: cover;
+    color: whitesmoke;
+    scale: 1.4;
+    border-radius: 20px;
+}
+
+#imgbtn2:hover {
+    background: rgba(0, 0, 0, .9) url("https://i.blogs.es/69fdcc/star-wars-saga/1366_2000.jpg");
+    background-position: center;
+    background-size: cover;
+    color: whitesmoke;
+    scale: 1.4;
+    border-radius: 20px;
 }

@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
 import { HomeComponent } from './components/home/home.component';
 import { Page404Component } from './components/page404/page404.component';
+import { PelisFichaComponent } from './components/pelis/pelis-ficha/pelis-ficha.component';
+import { PelisListaComponent } from './components/pelis/pelis-lista/pelis-lista.component';
+import { PelisComponent } from './components/pelis/pelis.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { StarshipsFichaComponent } from './components/starships/starships-ficha/starships-ficha.component';
@@ -12,11 +15,16 @@ import { StarshipsComponent } from './components/starships/starships.component';
 const routes: Routes = [
   {path:'home', component:HomeComponent },
   {path: 'starships', component:StarshipsComponent,canActivate:[AuthGuard], children: [
-   // {path:'',redirectTo:'list', pathMatch:'full'},
-    {path:'',component:StarshipsListComponent},
-    {path:':id',component:StarshipsFichaComponent}
-  ]},
- 
+    // {path:'',redirectTo:'list', pathMatch:'full'},
+     {path:'',component:StarshipsListComponent},
+     {path:':id',component:StarshipsFichaComponent}
+   ]},
+   {path: 'films', component:PelisComponent,canActivate:[AuthGuard], children: [
+    // {path:'',redirectTo:'list', pathMatch:'full'},
+     {path:'',component:PelisListaComponent},
+     {path:':id',component:PelisFichaComponent}
+   ]},
+   
   {path:'signin',component:SigninComponent}
   ,
   {path:'signup',component:SignupComponent}, 

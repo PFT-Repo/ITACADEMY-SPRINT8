@@ -5,26 +5,22 @@
                 <div id="nav-external-links" class="social col-12 col-md-4">
                     <ul id="social-links">
                         <li>
-                            <a class="facebook" href="https://www.facebook.com/StarWars" target="_blank"
-                                rel="noopener noreferrer" data-cto="social" title="facebook">
+                            <a class="facebook" href="https://www.facebook.com/StarWars" target="_blank" rel="noopener noreferrer" data-cto="social" title="facebook">
                                 <span class="facebook-icon nav-link "></span>
                             </a>
                         </li>
                         <li>
-                            <a class="instagram" href="https://www.instagram.com/starwars/" target="_blank"
-                                rel="noopener noreferrer" data-cto="social" title="instagram">
+                            <a class="instagram" href="https://www.instagram.com/starwars/" target="_blank" rel="noopener noreferrer" data-cto="social" title="instagram">
                                 <span class="instagram-icon nav-link"></span>
                             </a>
                         </li>
                         <li>
-                            <a class="twitter" href="https://twitter.com/starwars" target="_blank" rel="noopener noreferrer"
-                                data-cto="social" title="twitter">
+                            <a class="twitter" href="https://twitter.com/starwars" target="_blank" rel="noopener noreferrer" data-cto="social" title="twitter">
                                 <span class="twitter-icon nav-link"></span>
                             </a>
                         </li>
                         <li>
-                            <a class="youtub " href="https://www.youtube.com/user/starwars" target="_blank"
-                                rel="noopener noreferrer" data-cto="social" title="youtube">
+                            <a class="youtub " href="https://www.youtube.com/user/starwars" target="_blank" rel="noopener noreferrer" data-cto="social" title="youtube">
                                 <span class="youtube-icon nav-link"></span>
                             </a>
                         </li>
@@ -33,7 +29,7 @@
                         <a class="sw-kids" href="https://starwarskids.com/" target="_blank" rel="noopener noreferrer"
                             title="Star Wars Kids" data-cto="swkids">
                             <span class="sw-kids-icon nav-link"></span>
-                        </a>
+                    </a>
                     </span>
                     <div id="chrome-controls-container">
                         <div id="chrome-controls">
@@ -41,31 +37,28 @@
                     </div>
                 </div>
                 <a class="navbar-brand col-md-4 col-12" href="#">
-                    <img src="https://static-mh.content.disney.io/starwars/assets/navigation/sw_logo_stacked-336c62367939.png"
-                        alt="" width="203" height="88">
+                    <img src="https://static-mh.content.disney.io/starwars/assets/navigation/sw_logo_stacked-336c62367939.png" alt="" width="203" height="88">
                 </a>
-                <ng-container class="col-4" *ngIf ="!authService.loggedIn(); else LoggedIn">
+                <ng-container class="col-4" *ngIf="!authService.loggedIn(); else LoggedIn">
                     <div class="d-flex justify-content-end text-align-center col-12 col-md-3">
                         <li class="nav-item col-6 col-md-2">
                             <a class="nav-link" routerLink="signin" routerLinkActive="active">Login</a></li>
-                            <p class="align-self-center " style="color: #343434;">//</p>
+                        <p class="align-self-center " style="color: #343434;">//</p>
                         <li class="nav-item col-6 col-md-2">
                             <a class="nav-link" routerLink="signup" routerLinkActive="active">SignUp</a></li>
                     </div>
-                    
+
                 </ng-container>
                 <ng-template class="col-4" #LoggedIn>
                     <li class="nav-item col-md-4 col-12">
                         <a href="" class="nav-link" (click)="authService.logout()">Logout</a></li>
                 </ng-template>
-                </div>
             </div>
-           
+        </div>
+
         <div class="container-fluid d-flex justify-content-center">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse nav-grid mx-auto mt-3 mb-0" id="navbarSupportedContent">
@@ -76,6 +69,9 @@
                         </li>
                         <li class="nav-item bborder">
                             <a class="nav-link" routerLink="starships">Starships</a>
+                        </li>
+                        <li class="nav-item bborder">
+                            <a class="nav-link" routerLink="films">Films</a>
                         </li>
                     </ul>
                 </div>

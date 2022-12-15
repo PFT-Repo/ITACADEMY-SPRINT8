@@ -32,6 +32,8 @@ updateList(){
     
   }
   onScroll(){
+    let y = document.getElementById("loader");
+    y?.classList.add("show");
     if(this.actualPage<=this.lastPage){ 
       console.log('Scrolled');
       if(this.actualPage == 1){
@@ -39,12 +41,13 @@ updateList(){
       }
       this.ser.getships(this.actualPage);
       this.actualPage++;
-      setTimeout(()=>{this.updateList()},100);
+      setTimeout(()=>{this.updateList();
+      y?.classList.remove("show");},1000);
 
     }
     else{
       console.log('Scroll finalizado');
-      
+      y?.classList.remove("show");
     }
   }
 

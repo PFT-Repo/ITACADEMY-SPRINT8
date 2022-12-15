@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import {FormsModule} from "@angular/forms"
 import { HttpClientModule } from '@angular/common/http';
 import { PilotosFichaComponent } from './components/pilotos-ficha/pilotos-ficha.component';
-import { PelisFichaComponent } from './components/pelis-ficha/pelis-ficha.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
@@ -18,6 +17,9 @@ import { SignupComponent } from './components/signup/signup.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { AuthGuard } from './auth.guard';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { PelisComponent } from './components/pelis/pelis.component';
+import { PelisListaComponent } from './components/pelis/pelis-lista/pelis-lista.component';
+import { PelisFichaComponent } from './components/pelis/pelis-ficha/pelis-ficha.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +28,16 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     StarshipsListComponent,
     StarshipsFichaComponent,
     PilotosFichaComponent,
-    PelisFichaComponent,
     HeaderComponent,
     FooterComponent,
     HomeComponent,
     Page404Component,
     StarshipsListComponent,
     SignupComponent,
-    SigninComponent
+    SigninComponent,
+    PelisComponent,
+    PelisListaComponent,
+    PelisFichaComponent
   ],
   imports: [
     BrowserModule,

@@ -28,7 +28,7 @@ const routes: Routes = [
   {path:'signin',component:SigninComponent}
   ,
   {path:'signup',component:SignupComponent}, 
-  { path: '',   redirectTo: '/starships', pathMatch: 'full' },
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
   {path:'**', component: Page404Component}
 ];
 

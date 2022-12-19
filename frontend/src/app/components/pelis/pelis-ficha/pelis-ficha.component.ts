@@ -13,6 +13,13 @@ export class PelisFichaComponent implements OnInit {
   itemsi:any=[]
   queriesGot:any;
   constructor(private route:ActivatedRoute,private ser:ApistarsService) {
+    this.ser.getFilms();
+    if(this.ser.filmList[0] == null){
+      this.ser.getFilms();
+    }
+    else{
+      this.ngOnInit();
+    }
     }
 
   ngOnInit(): void {
@@ -22,7 +29,7 @@ export class PelisFichaComponent implements OnInit {
   }
 
   firstLoad() {
-   // setTimeout(()=>{this.itemsi = this.ser.imgList},2)
+   // setTimeout(()=>{this.itemsi = this.ser.filmList},2)
    this.itemsi = this.ser.filmList;
     console.log(this.itemsi);
     

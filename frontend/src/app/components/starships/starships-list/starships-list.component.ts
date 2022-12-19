@@ -42,7 +42,7 @@ updateList(){
       this.ser.getships(this.actualPage);
       this.actualPage++;
       setTimeout(()=>{this.updateList();
-      y?.classList.remove("show");},1000);
+      y?.classList.remove("show");},4000);
 
     }
     else{

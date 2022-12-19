@@ -8,21 +8,23 @@
     background-color: black;
     bottom: 0;
 }
-.foto{
+
+.foto {
     height: 100%;
     width: auto;
     background-image: url(https://static-mh.content.disney.io/starwars/assets/footer/vader_2-86e8fdb4e26d.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
-z-index: -1;
+    z-index: -1;
 }
 
-.disclaimer{
+.disclaimer {
     color: gray;
     font-size: small;
     text-align: center;
 }
+
 .negro {
     color: gray;
     height: auto;
@@ -40,43 +42,66 @@ z-index: -1;
     flex-wrap: wrap;
     justify-content: space-around;
     font-size: medium;
- a{
-    list-style: none;
-    text-decoration: none;
-    font-style: normal;
- }
-    
+    a {
+        list-style: none;
+        text-decoration: none;
+        font-style: normal;
+    }
 }
 
-li{
-     display: flex;
+li {
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     font-size: medium;
- a{
-    list-style: none;
-    text-decoration: none;
-    font-style: normal;
-    font-size: x-small;
- }
-
+    a {
+        list-style: none;
+        text-decoration: none;
+        font-style: normal;
+        font-size: x-small;
+    }
 }
-.nav-link{
 
+.bb {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}
+
+.nav-link {
     list-style: none;
     font-style: normal;
-    color: gray;
-    &:hover{
+    color: #FFF;
+    margin-bottom: -1px;
+    border-bottom: 1PX SOLID white;
+    &:hover {
         color: #d3d3d3;
     }
 }
 
-#nav-external-links{
+.nav-linked {
+    list-style: none;
+    font-style: normal;
+    color: #FFF;
+    &:hover {
+        color: #d3d3d3;
+    }
+}
+
+.nav-link:first-child {
+    border-left: none;
+}
+
+.nav-link:last-child {
+    border-right: none;
+}
+
+#nav-external-links {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-#social-links{
+
+#social-links {
     margin-top: 3px;
     list-style: none;
     font-style: normal;
@@ -85,25 +110,22 @@ li{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    li{
-    
-        a{
-            span{
+    li {
+        a {
+            span {
                 height: 25px;
                 width: 25px;
                 display: block;
                 margin-left: 5px;
                 margin-right: 5px;
-               
             }
         }
     }
 }
 
-.sw-kids-container{
-
-    a{
-        span{
+.sw-kids-container {
+    a {
+        span {
             height: 25px;
             width: 25px;
             display: block;
@@ -113,57 +135,59 @@ li{
     }
 }
 
-.facebook-icon{
-    background-image: url(../../../assets/img/icon_facebook.svg);
+.facebook-icon {
+    background-image: url(../../../assets/img/icon_facebook_hover.svg);
     background-repeat: no-repeat;
     background-position: center;
-    &:hover{
+    &:hover {
         background-image: url(../../../assets/img/icon_facebook_hover.svg);
     }
 }
 
-.instagram-icon{
-    background-image: url(../../../assets/img/icon_instagram.svg);
+.instagram-icon {
+    background-image: url(../../../assets/img/icon_instagram_hover.svg);
     background-repeat: no-repeat;
     background-position: center;
-    &:hover{
+    &:hover {
         background-image: url(../../../assets/img/icon_instagram_hover.svg);
     }
 }
 
-.twitter-icon{
-    background-image: url(../../../assets/img/icon_twitter.svg);
+.twitter-icon {
+    background-image: url(../../../assets/img/icon_twitter_hover.svg);
     background-repeat: no-repeat;
     background-position: center;
-    &:hover{
+    &:hover {
         background-image: url(../../../assets/img/icon_twitter_hover.svg);
     }
 }
 
-.youtube-icon{
-    background-image: url(../../../assets/img/icon_youtube.svg);
+.youtube-icon {
+    background-image: url(../../../assets/img/icon_youtube_hover.svg);
     background-repeat: no-repeat;
     background-position: center;
-    &:hover{
+    &:hover {
         background-image: url(../../../assets/img/icon_youtube_hover.svg);
     }
 }
+
 .sw-kids-container .sw-kids {
     display: inline-block;
     position: relative;
     width: 64px;
     height: 26px;
     margin: 6px 0;
-    background: #7a7a7a;
+    background: #d3d3d3;
     border-radius: 16px;
-    &:hover{
+    &:hover {
         background: #d3d3d3;
     }
 }
 
-hov:hover{
+hov:hover {
     color: lightgray;
 }
+
 .sw-kids-container .sw-kids .sw-kids-icon {
     position: absolute;
     width: 40px;
@@ -173,11 +197,14 @@ hov:hover{
     background-repeat: no-repeat;
     background-image: url(../../../assets/img/icon_kids.svg);
 }
+
+
 /*.sw-kids-icon{
     background-image: url(../../../assets/img/icon_kids.svg);
     background-repeat: no-repeat;
     background-position: center;
 }*/
+
 .sw-kids-container:before {
     content: "";
     position: absolute;
@@ -188,8 +215,8 @@ hov:hover{
     height: 28px;
     background: grey;
 }
-@media screen and (min-width: 900px)
-{
+
+@media screen and (min-width: 900px) {
     .sw-kids-container .sw-kids {
         width: 43px;
         height: 15px;
@@ -198,7 +225,6 @@ hov:hover{
     .sw-kids-container {
         margin: 4px;
     }
-
     .sw-kids-container .sw-kids .sw-kids-icon {
         width: 31px;
         height: 9px;

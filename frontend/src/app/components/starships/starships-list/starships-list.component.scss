@@ -27,6 +27,9 @@
     height: 50px;
     width: 50px;
     background-image: url("/assets/img/yodaloader.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     opacity: 0;
     &.show {
         opacity: 1;

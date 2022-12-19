@@ -1,4 +1,4 @@
-.bg-stars{
+.bg-stars {
     background-image: url(https://static-mh.content.disney.io/starwars/assets/navigation/navigation_stars-c6452e016c73.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -7,20 +7,22 @@
     background-color: black;
 }
 
-.nav-grid{
-    border-top: 1px solid gray;
+.nav-grid {
     border-bottom: 1px solid gray;
 }
-.bborder{
+
+.bborder {
     border-left: 1px solid gray;
     border-right: 1px solid gray;
 }
-#nav-external-links{
+
+#nav-external-links {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-#social-links{
+
+#social-links {
     margin-top: 3px;
     list-style: none;
     font-style: normal;
@@ -29,33 +31,31 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    li{
-    
-        a{
-            span{
-                height: 25px;
-                width: 25px;
+    li {
+        a {
+            span {
+                height: 20px;
+                width: 20px;
                 display: block;
-                margin-left: 5px;
-                margin-right: 5px;
-               
+                margin-left: 10px;
+                margin-right: 10px;
             }
         }
     }
 }
-.nav-link{
 
+.nav-link {
     list-style: none;
     font-style: normal;
-    color: gray;
-    &:hover{
-        color: #d3d3d3;
+    color: #B5B7B7;
+    &:hover {
+        color: #fff;
     }
 }
-.sw-kids-container{
 
-    a{
-        span{
+.sw-kids-container {
+    a {
+        span {
             height: 25px;
             width: 25px;
             display: block;
@@ -65,57 +65,59 @@
     }
 }
 
-.facebook-icon{
-    background-image: url(../../../assets/img/icon_facebook.svg);
+.facebook-icon {
+    background-image: url(../../../assets/img/icon_facebook_hover.svg);
     background-repeat: no-repeat;
     background-position: center;
-    &:hover{
+    &:hover {
         background-image: url(../../../assets/img/icon_facebook_hover.svg);
     }
 }
 
-.instagram-icon{
-    background-image: url(../../../assets/img/icon_instagram.svg);
+.instagram-icon {
+    background-image: url(../../../assets/img/icon_instagram_hover.svg);
     background-repeat: no-repeat;
     background-position: center;
-    &:hover{
+    &:hover {
         background-image: url(../../../assets/img/icon_instagram_hover.svg);
     }
 }
 
-.twitter-icon{
-    background-image: url(../../../assets/img/icon_twitter.svg);
+.twitter-icon {
+    background-image: url(../../../assets/img/icon_twitter_hover.svg);
     background-repeat: no-repeat;
     background-position: center;
-    &:hover{
+    &:hover {
         background-image: url(../../../assets/img/icon_twitter_hover.svg);
     }
 }
 
-.youtube-icon{
-    background-image: url(../../../assets/img/icon_youtube.svg);
+.youtube-icon {
+    background-image: url(../../../assets/img/icon_youtube_hover.svg);
     background-repeat: no-repeat;
     background-position: center;
-    &:hover{
+    &:hover {
         background-image: url(../../../assets/img/icon_youtube_hover.svg);
     }
 }
+
 .sw-kids-container .sw-kids {
     display: inline-block;
     position: relative;
     width: 64px;
     height: 26px;
     margin: 6px 0;
-    background: #7a7a7a;
+    background: #ffffff;
     border-radius: 16px;
-    &:hover{
-        background: #d3d3d3;
+    &:hover {
+        background: #ffffff;
     }
 }
 
-hov:hover{
+hov:hover {
     color: lightgray;
 }
+
 .sw-kids-container .sw-kids .sw-kids-icon {
     position: absolute;
     width: 40px;
@@ -125,11 +127,14 @@ hov:hover{
     background-repeat: no-repeat;
     background-image: url(../../../assets/img/icon_kids.svg);
 }
+
+
 /*.sw-kids-icon{
     background-image: url(../../../assets/img/icon_kids.svg);
     background-repeat: no-repeat;
     background-position: center;
 }*/
+
 .sw-kids-container:before {
     content: "";
     position: absolute;
@@ -140,17 +145,49 @@ hov:hover{
     height: 28px;
     background: grey;
 }
-@media screen and (min-width: 900px)
-{
+
+#logo {
+    display: inline-block;
+    width: 203px;
+    height: 88px;
+}
+
+#logo2 {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    #social-links {
+        display: none;
+    }
+    #logo {
+        display: none;
+    }
+    #logo2 {
+        display: inline-block;
+        width: 233px !important;
+        height: 24px !important;
+    }
+    .sw-kids-container .sw-kids .sw-kids-icon {
+        display: none;
+    }
+    .sw-kids-container .sw-kids {
+        display: none;
+    }
+    .sw-kids-container:before {
+        display: none;
+    }
+    .sw-kids-container {
+        margin: 4px;
+    }
+}
+
+@media screen and (min-width: 900px) {
     .sw-kids-container .sw-kids {
         width: 43px;
         height: 15px;
         margin: 3px 0 0 10px;
     }
-    .sw-kids-container {
-        margin: 4px;
-    }
-
     .sw-kids-container .sw-kids .sw-kids-icon {
         width: 31px;
         height: 9px;

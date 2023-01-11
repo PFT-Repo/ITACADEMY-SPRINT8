@@ -30,7 +30,6 @@ router.get('/imgs', (req, res) => {
     res.send(data);
 
 });
-
 router.get('/starpi', (req, res) => {
     res.send({
         naves: {
@@ -1923,6 +1922,9 @@ router.get('/starpi/starships/4', (req, res) => {
     })
 
 });
+
+router.get('/starpi/people', (req, res) => { res.redirect('/starpi/people/1'); })
+
 router.get('/starpi/people/1', (req, res) => {
     res.send({
         "count": 82,

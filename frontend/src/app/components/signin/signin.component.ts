@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class SigninComponent implements OnInit {
   valMail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // email validation format
-valPass = /^[a-zA-Z0-9]{4,8}$/;//Alfanumeric from 4 to 8 char
+valPass = /\w/g;//Alfanumeric from 4 to 8 char
   user ={
     email:'',
     password:''
@@ -40,8 +40,13 @@ valPass = /^[a-zA-Z0-9]{4,8}$/;//Alfanumeric from 4 to 8 char
   }
   validate():boolean{
     if(this.user.email != "" && this.user.password != ""){
-      if (this.valMail.test(this.user.email) && (this.valPass.test(this.user.password))){
+      console.log("Email y pass no están vacios")
+      if (this.valMail.test(this.user.email) ){
+        console.log("pasó el test de mail");
+        if (this.valPass.test(this.user.password)) {
+           console.log("Pasaron los examenes de formateo en front");
         return true;
+        }
       }
     }
     return false;

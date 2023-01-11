@@ -10,7 +10,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class SignupComponent implements OnInit {
 valMail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // email validation format
-valPass = /^[a-zA-Z0-9]{4,8}$/;//Alfanumeric from 4 to 8 char
+valPass = /\w/g;
 user ={
   email:'',
   password:''
@@ -20,7 +20,8 @@ user ={
   ngOnInit(): void {
   }
 signUp(){
-  if(this.validate()){
+  let validation:boolean = this.validate();
+  if(validation){
      this.authService.signUp(this.user)
   .subscribe(res => { 
      let y:string | any= Object.values(res);
@@ -39,7 +40,10 @@ signUp(){
 
   validate():boolean{
     if(this.user.email != "" && this.user.password != ""){
+      console.log("Email y pass no están vacios")
       if (this.valMail.test(this.user.email) && (this.valPass.test(this.user.password))){
+        console.log("Pasaron los examenes de formateo en front");
+        
         return true;
       }
     }

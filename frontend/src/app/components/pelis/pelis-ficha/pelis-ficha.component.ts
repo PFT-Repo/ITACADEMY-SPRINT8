@@ -10,6 +10,9 @@ import { ApistarsService } from 'src/app/services/apistars.service';
 export class PelisFichaComponent implements OnInit {
 
   item:any=[]
+  starships:any[]=[]
+  planetas:any[]=[]
+  personas:any[]=[]
   itemsi:any=[]
   queriesGot:any;
   constructor(private route:ActivatedRoute,private ser:ApistarsService) {
@@ -44,6 +47,9 @@ console.log('itemsi será igual al array de pelis: '+ this.itemsi);
     const result =this.getMoviesFromDirector(this.itemsi);
     if(result)
     this.item = result[0];
+    this.getStarchips();
+    this.getPersonajes();
+    this.getPlanetas();
     let y = <HTMLImageElement> document.getElementById('im');
     y.src = "../../../../assets/img/"+this.item.title+".jpg";
     console.log(this.item);
@@ -59,6 +65,19 @@ console.log('itemsi será igual al array de pelis: '+ this.itemsi);
  if (array!= null){return array.filter((array:{title:string}) => array.title == this.queriesGot);
 }
 return;
+}
+
+getStarchips(){
+   this.starships = this.item.starships;
+   console.log("se supone ya tienes las naves en un arreglo bro");
+   
+}
+
+getPlanetas(){
+  this.planetas = this.item.planets;
+}
+getPersonajes(){
+  this.personas = this.item.characters;
 }
 
 }

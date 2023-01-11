@@ -12,9 +12,15 @@
                 <p>Año de lanzamiento: {{item.release_date}}</p>
             </div>
             <div class="col-12 text-center col-md-6">
-                <p>Personajes: {{item.characters}}</p>
-                <p>Planetas: {{item.planets}}</p>
-                <p>Naves: {{item.starships}}</p>
+                <div *ngIf="personas.length>0">Personajes:
+                    <p *ngFor="let persona of personas">{{persona}}</p>
+                </div>
+                <div *ngIf="planetas.length>0">Planetas:
+                    <p *ngFor="let planeta of planetas">{{planeta}}</p>
+                </div>
+                <div *ngIf="starships.length>0">Naves:
+                    <p *ngFor="let stars of starships">{{stars}}</p>
+                </div>
             </div>
         </div>
     </div>

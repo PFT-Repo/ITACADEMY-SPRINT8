@@ -3,7 +3,7 @@
         <div class="card  text-white bg-dark h-100">
             <div class="card-header text-center">Iniciar Sesion</div>
             <div class="card-body">
-                <form action="signIn()" (click)="signIn()" class="g-3">
+                <form action="signIn()" class="g-3">
                     <div class="form-group my-3">
                         <input id="mail" type="email" [(ngModel)]="user.email" name="email" class="form-control" placeholder="Email@me.com" required>
                     </div>
@@ -11,7 +11,7 @@
                         <input id="pass" type="password" [(ngModel)]="user.password" name="password" class="form-control" placeholder="Password" required>
                     </div>
                     <div class="text-center col-12">
-                        <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                        <button type="submit" class="btn btn-primary btn-block" (click)="signIn()">Enviar</button>
                     </div>
                 </form>
             </div>

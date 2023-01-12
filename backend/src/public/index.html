@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>Starpi by @TurpialCode</title>
 </head>
+
 <body>
-    <h1>Bienvenidos a Starpi</h1>
-    <p>En esta mini API vamos a poder obtener datos de StarWars más o menos lo que haya podido agregar al momento en que hayas encontrado esto jajajaj</p>
-    <br>
-    <p>Es importante que tengas una carpeta Assets para las imagenes en tu proyecto ya que tendrás que descargarlas y la api devolverá una ruta por defecto de dicha imagen</p>
-    <p>Como por ejemplo seria algo así: <code>'./assets/img/Imagen</code>, así que para evitar errores agrega en el src de tu app una carpeta de assets.</p>
-    <a href="/imgs">Pulsa para descargar imagenes en zip</a>
+    <div class="cover h-100">
+        <div class="container text-center pt-5">
+            <h1>Bienvenidos a Starpi</h1>
+            <p>En esta mini API vamos a poder obtener datos de StarWars más o menos lo que haya podido agregar al momento en que hayas encontrado esto jajaja</p>
+            <br>
+            <p>Es importante que tengas una carpeta Assets para las imagenes en tu proyecto ya que tendrás que descargarlas y la api devolverá una ruta por defecto de dicha imagen</p>
+            <p>Como por ejemplo seria algo así: <code>'./assets/img/Imagen</code>, así que para evitar errores agrega en el src de tu app una carpeta de assets.</p>
+            <a class="btn btn-success" href="/imgs">Pulsa para descargar imagenes en zip</a>
+            <hr>
+            <h2>Como usar Starpi ?</h2>
+            <p> Es realmente sencillo, solo tienes que colocar alguno de los siguientes Endpoints</p>
+            <p style="color: slategray;">Nota: Todos los Endpoints devuelven un archivo JSON y algunos facilitan la paginación de los mismos</p>
+        </div>
+        <h6 class="mx-auto text-center">Leyenda: <code>Funciona</code>// No Funciona</h6>
+        <ol class="container mx-auto w-100">
+            <li>
+                <a style="text-decoration: none; color: #D63384;" href="https://starpi.herokuapp.com/starpi" target="_blank" rel="noopener noreferrer"> <code>/starpi</code>
+                </a>
+                <p>Para consumir la api en su totalidad desde solo una llamada</p>
+
+            </li>
+            <li>
+                <a style="text-decoration: none; color: #D63384;" href="https://starpi.herokuapp.com/starpi/starships" target="_blank" rel="noopener noreferrer"> <code>/starpi/starships</code> </a>
+                <p>Para consumir paginadamente la lista de naves</p>
+            </li>
+            <li> <a style="text-decoration: none; color: #D63384;" href="https://starpi.herokuapp.com/starpi/people" target="_blank" rel="noopener noreferrer"><code>/starpi/people</code> </a>
+                <p>Para consumir a personajes</p>
+            </li>
+            <li class="disabled">/starpi/planets
+                <p>Para consumir la lista de planetas</p>
+            </li>
+        </ol>
+        <hr>
+        <div class="footer sticky-bottom text-bg-dark text-center">
+            <p>Star Wars &trade; and all associated names and/or images are copyright Lucasfilm Ltd. Images were freely collected from <a href="http://starwars.wikia.com/wiki/Main_Page">Wookiepedia</a> and data structure copied from <a href="https://swapi.dev/">Swapi.dev</a>                to our new all-in <a target="_blank" href="https://starpi.herokuapp.com/">Api</a>.</p>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
+
 </html>
